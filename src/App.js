@@ -6,7 +6,7 @@ export default function App() {
   let [variable, setVariable] = useState("");
 
   let clickFunction = () => {
-    setVariable("loading");
+    setVariable("loading...");
     setTimeout(() => {
       let result = array[Math.floor(Math.random() * array.length)];
       setVariable(result);
@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div className="App">
       <input
-        style={{ color: variable }}
+        style={{ color: variable === "loading..." ? "black" : variable }}
         value={variable}
         className="input"
         disabled
